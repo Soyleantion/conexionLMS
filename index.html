@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="images/logo.png">
+	<title>PLANTILLA</title>
+
+
+	<script type="text/javascript" src="js/SCORM_API_wrapper.js"></script>
+	<script src="js/config.js"></script>
+	
+
+	<!-- ICONOS -->
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	
+
+	<!-- HOJAS DE ESTILOS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/loader.css">
+
+
+
+	<!-- FUENTES -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- LOADER -->
+	<div class="lds-ring" id="loader">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+
+	<main class="slider">
+		<!-- fade css -->
+
+		<div class="myslide fade">
+			<div class="diapositiva-uno">
+				<div class="item">
+					<p>Slide 1</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="myslide fade">
+			<div class="diapositiva-dos">
+				<p>Slide 2</p>
+			</div>
+		</div>
+
+		<div class="myslide fade">
+			<div class="diapositiva-dos">
+				<p>Slide 3</p>
+			</div>
+		</div>
+
+		<div class="myslide fade">
+			<div class="diapositiva-dos">
+				<p>Slide 4</p>
+			</div>
+		</div>
+
+		<div class="myslide fade">
+			<div class="diapositiva-dos">
+				<p>Slide 5</p>
+			</div>
+		</div>
+
+		<div class="myslide fade">
+			<div class="diapositiva-dos">
+				<p>Slide 6</p>
+				<h2>Primera conexión a la plataforma LMS</h2>
+				<br><br>
+				<input type="button" onclick="ObtenerNombre()" value="Obtener Nombre">
+				<input type="button" onclick="CompletarCurso()" value="Completar Curso">
+				<input type="button" onclick="ObtenerProgreso()" value="Mostar progreso">
+				<input type="button" onclick="CambiarProgreso()" value="Mostar progreso cambiado">
+				<div id="Nombre"></div>
+			</div>
+		</div>
+
+
+
+
+
+		<!-- /fade css -->
+
+		<!-- onclick js -->
+		<a id="prev" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a id="next" class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+		<!-- /onclick js -->
+	</main>
+	<script src="js/porcentaje.js"></script>
+	<script src="js/slides.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="js/config.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+*{
+ overflow: hidden;
+ background: blue;
+}
+
+.slider {
+	width: 100vw;
+	background-color: #fff;
+}
+
+.myslide {
+	height: 100vh;
+
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+	color: rgb(2, 1, 5);
+}
+
+.next {
+	right: 0;
+}
+
+
+.txt {
+	text-align: center;
+	font-family: 'Nunito', cursive;
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 30%;
+	left: 15%;
+	right: 20%;
+	-webkit-animation-name: posi;
+	-webkit-animation-duration: 2s;
+	animation-name: posi;
+	animation-duration: 2s;
+	z-index: 1;
+}
+
+.txt .txt1 {
+	text-align: center;
+	color: rgb(197, 91, 4);
+}
+
+.txt .txt2 {
+	text-align: center;
+	color: rgb(247, 247, 247);
+}
+
+.txt .txt3 {
+	text-align: center;
+	color: rgb(2, 1, 5);
+}
+
+.txt .txt4 {
+	text-align: center;
+	color: rgb(231, 2, 2);
+}
+
+.txt .txt5 {
+	z-index: 10;
+	text-align: center;
+	color: rgb(2, 231, 71);
+}
+
+
+
