@@ -1,32 +1,34 @@
-const myslide = document.querySelectorAll('.myslide'),
-dot = document.querySelectorAll('.dot');
-let counter = 1;
+const myslide = document.querySelectorAll('.myslide');
+let counter = init();
+
+
+
 slidefun(counter);
 
-let timer = setInterval(autoSlide, 30000);
+/* let timer = setInterval(autoSlide, 30000); */
 
-function autoSlide() {
+/* function autoSlide() {
 	counter += 1;
 	slidefun(counter);
-}
+} */
 
 function plusSlides(n) {
 	counter += n;
 	slidefun(counter);
-	resetTimer();
+	/* resetTimer(); */
 }
 
 function currentSlide(n) {
 	counter = n;
 	slidefun(counter);
-	resetTimer();
+	/* resetTimer(); */
 }
 
-function resetTimer() {
+/* function resetTimer() {
 	clearInterval(timer);
 	timer = setInterval(autoSlide, 30000);
 }
-
+ */
 function slidefun(n) {
 
 	let i;
@@ -41,5 +43,7 @@ function slidefun(n) {
 		counter = myslide.length;
 	}
 	myslide[counter - 1].style.display = "block";
-	
+
 }
+
+
