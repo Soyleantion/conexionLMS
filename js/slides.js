@@ -1,8 +1,10 @@
-/**************************PORCENTAJE********************************/
 const myslide = document.querySelectorAll('.myslide');
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 
+
+
+/******************************************************************* */
 let counter = init();
 counter = parseInt(counter);
 slidefun(counter);
@@ -55,6 +57,60 @@ function slidefun(n) {
 
 }
 
+
+
+/***********************MENÚ****************************************** */
+
+let nameSlides = [];
+
+for (let i = 0 ; i < myslide.length ; i++){
+	nameSlides[i] = i+1;
+}
+
+const slideList = document.getElementById('slideList');
+const  fragment = document.createDocumentFragment();
+
+for (const nameSlide of nameSlides){
+    const slideList = document.createElement('LI');
+    slideList.textContent = nameSlide;
+    fragment.appendChild(slideList);
+}
+console.log(fragment);
+slideList.appendChild(fragment);
+
+let li = document.getElementsByTagName("li");
+/* console.log (li[0]); */
+
+/* li[0].classList.add("hola"); */
+
+
+for (let i=1 ; i <= nameSlides.length ; i++){
+    li[i-1].classList.add("seccion","seccion" + i);
+}
+
+
+
+const seccion = document.querySelectorAll('.seccion');
+
+console.log(seccion);
+let actual=0;
+for (let i=0 ; i<nameSlides.length; i++){
+	seccion[i].addEventListener("click", function(){ enviarPagina(i); });
+}
+//let actual  =  seccion[1].textContent; //Cambiar variable
+//seccion[1].addEventListener("click", enviarPagina);
+//actual = parseInt(actual);
+
+//console.log(actual);
+
+function enviarPagina(i){
+	actual=i+1;
+	actual= parseInt(actual);
+	console.log("Estoy enviando la pagina:" + actual);
+	currentSlide(actual);
+}
+
+
 /**************************PORCENTAJE********************************/
 
 
@@ -63,13 +119,24 @@ prev.addEventListener("click", anterior);
 
 /* let numSlides = myslide.length; */ //DIGITAR EL NÚMERO DE SLIDES
 let countSlider = counter; // CONTADOR DE SLIDES
+
 let porcentaje = 0;
 let sliderAnterior = countSlider;
 
 function siguiente() {
+	/* if (actual > 0){
+		console.log("Estoy entrando?");
+		countSlider = actual;
+	}
+	else{
+		console.log("No estoy entrando");
+	} */
+
 	if (countSlider < myslide.length) {
+		
 		countSlider++;
 		console.log(countSlider);
+
 
 		if (sliderAnterior> countSlider){
 
@@ -96,5 +163,3 @@ function calcularPorcentaje() {
 	
 	modifyScoreRaw(porcentaje);
 }
-
-
