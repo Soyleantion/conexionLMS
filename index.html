@@ -10,12 +10,10 @@
 
 
 	<script type="text/javascript" src="js/SCORM_API_wrapper.js"></script>
-	<script src="js/config.js"></script>
-	
+	<script src="js/SCORM_CONFIG.js"></script>
 
 	<!-- ICONOS -->
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	
 
 	<!-- HOJAS DE ESTILOS -->
 	<link rel="stylesheet" href="css/style.css">
@@ -50,8 +48,8 @@
 			<div class="diapositiva-uno">
 				<div class="item">
 					<p>Slide 1</p>
-					<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-					<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+					<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+					<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 				</div>
 
 			</div>
@@ -60,32 +58,32 @@
 		<div class="myslide fade">
 			<div class="diapositiva-dos">
 				<p>Slide 2</p>
-				<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-				<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 			</div>
 		</div>
 
 		<div class="myslide fade">
 			<div class="diapositiva-tres">
 				<p>Slide 3</p>
-				<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-				<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 			</div>
 		</div>
 
 		<div class="myslide fade">
 			<div class="diapositiva-cuatro">
 				<p>Slide 4</p>
-				<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-				<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 			</div>
 		</div>
 
 		<div class="myslide fade">
 			<div class="diapositiva-cinco">
 				<p>Slide 5</p>
-				<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-				<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 			</div>
 		</div>
 
@@ -94,12 +92,12 @@
 				<p>Slide 6</p>
 				<h2>Primera conexión a la plataforma LMS</h2>
 				<br><br>
-				<input type="button" onclick="ObtenerNombre()" value="Obtener Nombre">
-				<input type="button" onclick="CompletarCurso()" value="Completar Curso">
-				<input type="button" onclick="DescompletarCurso()" value="Descompletar Curso">
-				<input type="button" onclick="ObtenerProgreso()" value="Mostar progreso">
-				<input type="button" onclick="CambiarProgreso()" value="Cambiar progreso">
-				<input type="button" onclick="MostrarProgreso()" value="Mostar progreso cambiado">
+				<input type="button" onclick="getNameStudent()" value="Get Name">
+				<input type="button" onclick="completeStatusLesson()" value="completeStatusLesson">
+				<input type="button" onclick="incompleteStatusLesson()" value="incompleteStatusLesson">
+				<input type="button" onclick="getStatusLesson()" value="getStatusLesson">
+				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
+				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 				<div id="Nombre"></div>
 			</div>
 		</div>
@@ -109,17 +107,12 @@
 				<p>Slide 7</p>
 			</div>
 		</div>
-		
+
 		<div class="myslide fade">
 			<div class="diapositiva-seis" id="diapositiva-siete">
 				<p>Slide 8</p>
 			</div>
 		</div>
-
-
-
-
-
 
 		<!-- /fade css -->
 
@@ -130,10 +123,8 @@
 
 		<!-- /onclick js -->
 	</main>
-	<script src="js/porcentaje.js"></script>
 	<script src="js/slides.js"></script>
 	<script src="js/loader.js"></script>
-	<script src="js/config.js"></script>
 </body>
 
 </html>
