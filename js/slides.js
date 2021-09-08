@@ -1,11 +1,7 @@
 /**************************PORCENTAJE********************************/
 const myslide = document.querySelectorAll('.myslide');
-
-
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
-next.addEventListener("click", siguiente);
-prev.addEventListener("click", anterior);
 
 let counter = init();
 counter = parseInt(counter);
@@ -42,11 +38,18 @@ function slidefun(n) {
 		myslide[i].style.display = "none";
 	}
 
-	if (n > myslide.length) {
-		counter = 1;
+	if (n >= myslide.length) {
+		next.style.display = "none";
+		completeStatusLesson();
+		/* counter = 1; */
+	}else{
+		next.style.display = "block";
 	}
-	if (n < 1) {
-		counter = myslide.length;
+	if (n <= 1) {
+		prev.style.display = "none";
+		/* counter = myslide.length; */
+	}else{
+		prev.style.display = "block";
 	}
 	myslide[counter - 1].style.display = "block";
 
@@ -55,16 +58,25 @@ function slidefun(n) {
 /**************************PORCENTAJE********************************/
 
 
+next.addEventListener("click", siguiente);
+prev.addEventListener("click", anterior);
+
 /* let numSlides = myslide.length; */ //DIGITAR EL NÚMERO DE SLIDES
 let countSlider = counter; // CONTADOR DE SLIDES
 let porcentaje = 0;
-let porcentajeActual = 0;
+let sliderAnterior = countSlider;
 
 function siguiente() {
 	if (countSlider < myslide.length) {
 		countSlider++;
 		console.log(countSlider);
-		calcularPorcentaje();
+
+		if (sliderAnterior> countSlider){
+
+		}else{
+			sliderAnterior = countSlider;
+			calcularPorcentaje();
+		}
 	}
 }
 function anterior() {
@@ -75,10 +87,14 @@ function anterior() {
 	}
 }
 function calcularPorcentaje() {
+	
 	porcentaje = (countSlider * 100) / myslide.length;
+	
 	/*  porcentaje = Math.trunc(porcentaje); */
 	porcentaje = porcentaje.toFixed(1);
 	console.log(porcentaje);
+	
+	modifyScoreRaw(porcentaje);
 }
 
 

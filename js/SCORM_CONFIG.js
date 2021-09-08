@@ -44,6 +44,17 @@ function showLocationLesson() {// Función para motrar la location actual
 	var callSucceeded = scorm.get("cmi.core.lesson_location");// Obtiene la location actual
 	console.log("Ultima página guardada:" + callSucceeded);// Muestra por consola la location actual
 }
+function modifyScoreRaw(porcentaje){// Función  para modificar el score del curso
+	var callSucceeded = scorm.set("cmi.core.score.raw", porcentaje); // Se modifica el score del curso
+	console.log ("Se cambió el Score Raw?:" + callSucceeded); // Se muestra por consola si el cambio fue exitoso
+	callSucceeded = scorm.get("cmi.core.score.raw"); //Obtiene el nuevo valor del porcentaje
+	console.log ("Nuevo porcentaje adquirido:" + callSucceeded ); //Muestra por consola el valor del porcentaje
+}
+
+function modifyStatusSucces(){// Función para modificar el suceso del curso
+	var callSucceeded = scorm.set("cmi.core.success_status", "completed"); // Cambia el suceso del curso a "completed"
+	console.log ("Se cambio el 'sucess' del curso?: " + callSucceeded); // Se muestra por consola si el cambio fue exitoso
+}
 
 function end() { //Función para finalizar la conexión con el Scorm
 	alert("Conexion terminada."); // Muestra un alert para indicar que se terminó la conexión
@@ -55,7 +66,6 @@ function end() { //Función para finalizar la conexión con el Scorm
 function goToPage() { // Función utilizada en "function init();" para redireccionar los slides
 	var paginaActual = scorm.get("cmi.core.lesson_location"); // Almacena el valor de la location actual en la variable "paginaActual"
 	console.log("Esto está mostrando página actual:   " + paginaActual); // Muestra por consola la variable "paginaActual" para indicar que valor está mostrando
-	
 	if (paginaActual == 'null' || paginaActual == '') { //Condición para saber si el estudiante ya ha ingresado al curso
 		console.log("BIENVENIDO AL CURSO POR PRIMERA VEZ:  true"); // Si el usuario ingresa por primera vez muestra un console.log de bienvenido
 		paginaActual = 1; //Le asigna a paginaActual el valor de 1 para redireccionar al primer slide
