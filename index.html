@@ -39,9 +39,17 @@
 		<div></div>
 		<div></div>
 	</div>
+	<div  class="welcome" id="welcome">
+		<object data="./content/welcome/index.html"></object>
 
+		<button class="btn-comenzar" onclick="hiddenWelcome()">
+			Comenzar
+		</button>
+	</div>
 
-	<main class="slider">
+	
+
+	<main class="slider" id="slider">
 		<!-- fade css -->
 		<ul id="slideList" class="menu">
 			
@@ -55,7 +63,7 @@
 					<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
 					<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 						
-					<object class="page" data="./page/page1/index.html" name="contenedor"></object>
+					<object class="page" data="./content/page1/index.html" name="contenedor"></object>
 				
 				</div>
 
@@ -68,7 +76,7 @@
 				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
 				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">									
 				
-				<object class="page" data="./page/page2/index.html"  name="contenedor"></object>
+				<object class="page" data="./content/page2/index.html"  name="contenedor"></object>
 
 
 			</div>
@@ -82,7 +90,7 @@
 				<input type="button" onclick="modifyScoreRaw()" value="modifyScoreRaw">
 				<input type="button" onclick="modifyStatusSucces()" value="modifyStatusSucces">
 
-				<object class="page" data="./page/page3/index.html"  name="contenedor"></object>
+				<object class="page" data="./content/page3/index.html"  name="contenedor"></object>
 
 
 			</div>
@@ -94,7 +102,7 @@
 				<input type="button" onclick="modifyLocationLesson()" value="modifyLocationLesson">
 				<input type="button" onclick="showLocationLesson()" value="showLocationLesson">
 
-				<object class="page" data="./page/page4/index.html"  name="contenedor"></object>
+				<object class="page" data="./content/page4/index.html"  name="contenedor"></object>
 
 			</div>
 		</div>
@@ -172,6 +180,8 @@
 	
 	<script src="js/slides.js"></script>
 	<script src="js/loader.js"></script>
+	<script src="js/welcome.js"></script>
+
 </body>
 
 </html>
