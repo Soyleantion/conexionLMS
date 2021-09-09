@@ -64,6 +64,7 @@ for (const nameSlide of nameSlides) {
 	slideList.textContent = nameSlide;
 	fragment.appendChild(slideList);
 }
+
 console.log(fragment);
 slideList.appendChild(fragment);
 
@@ -134,3 +135,4 @@ function calcularPorcentaje() {
 	console.log(porcentaje);
 	modifyScoreRaw(porcentaje);
 }
+
